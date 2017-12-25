@@ -116,15 +116,31 @@
 				}
 			}
 			&ORANGE_WHITE {
+				@orange: #eb8a0f;
 				button {
-					border-color: black;
-					background: black;
+					border-color: darken(@orange,10%);
+					background: @orange;
 					color: white;
 					&:hover{
-						background-color: #333333;
+						background-color: lighten(@orange, 5%);
 					}
 					&:active{
-						background-color: #525252;
+						background-color: lighten(@orange, 10%);
+					}
+				}
+			}
+			&BLACK_ORANGE {
+				@orange: #eb8a0f;
+				button {
+					border-color: @orange;
+					background: black;
+					color: @orange;
+					&:hover{
+						background-color: darken(@orange, 45%);
+					}
+					&:active{
+						background-color: darken(@orange, 40%);
+						color: lighten(@orange, 10%);
 					}
 				}
 			}

@@ -126,6 +126,24 @@ export default {
             size: ESize.MEDIUM,
           } as IDynaButtonProps
         },
+        {
+          slug: 'orange-white',
+          title: 'orange-white',
+          props: {
+            style: EStyle.ROUNDED,
+            color: EColor.ORANGE_WHITE,
+            size: ESize.MEDIUM,
+          } as IDynaButtonProps
+        },
+        {
+          slug: 'black-orange',
+          title: 'black-orange',
+          props: {
+            style: EStyle.ROUNDED,
+            color: EColor.BLACK_ORANGE,
+            size: ESize.MEDIUM,
+          } as IDynaButtonProps
+        },
       ]
     },
     {
