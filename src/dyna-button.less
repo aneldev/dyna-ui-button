@@ -9,10 +9,15 @@
 				font-size: 0;
 
 				button {
+					position: relative;
 					outline: none;
 					border-style: solid;
 					cursor: pointer;
 					transition: background-color 200ms ease-out;
+					&:active {
+						top: 1px;
+						left: 1px;
+					}
 				}
 
 				&.dnbtn-size- {
@@ -24,11 +29,6 @@
 							border-width: 1px;
 							border-radius: 8px;
 							font-weight: bold;
-							&:active {
-								position: relative;
-								top: 1px;
-								left: 1px;
-							}
 						}
 					}
 					&MEDIUM {
@@ -40,11 +40,6 @@
 							border-width: 1px;
 							border-radius: 16px;
 							font-weight: bold;
-							&:active {
-								position: relative;
-								top: 1px;
-								left: 1px;
-							}
 						}
 					}
 					&LARGE {
@@ -56,7 +51,6 @@
 							border-radius: 32px;
 							font-weight: bold;
 							&:active {
-								position: relative;
 								top: 2px;
 								left: 2px;
 							}
@@ -71,7 +65,6 @@
 							border-radius: 64px;
 							font-weight: bold;
 							&:active {
-								position: relative;
 								top: 2px;
 								left: 2px;
 							}
@@ -110,6 +103,19 @@
 				}
 			}
 			&BLACK_WHITE {
+				button {
+					border-color: black;
+					background: black;
+					color: white;
+					&:hover{
+						background-color: #333333;
+					}
+					&:active{
+						background-color: #525252;
+					}
+				}
+			}
+			&ORANGE_WHITE {
 				button {
 					border-color: black;
 					background: black;
