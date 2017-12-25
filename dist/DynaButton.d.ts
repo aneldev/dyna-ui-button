@@ -7,6 +7,8 @@ export declare enum EColor {
     WHITE_BLACK = "WHITE_BLACK",
     WHITE_RED = "WHITE_RED",
     BLACK_WHITE = "BLACK_WHITE",
+    ORANGE_WHITE = "ORANGE_WHITE",
+    BLACK_ORANGE = "BLACK_ORANGE",
     TRANSPARENT_WHITE = "TRANSPARENT_WHITE",
 }
 export declare enum ESize {
