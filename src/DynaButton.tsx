@@ -5,6 +5,7 @@ import "./dyna-button.less";
 
 export enum EStyle {
   ROUNDED = "ROUNDED",
+  FLAT = "FLAT",
 }
 
 export {EColor}

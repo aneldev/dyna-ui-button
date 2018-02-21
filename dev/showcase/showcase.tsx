@@ -22,8 +22,9 @@ export default {
         </div>
       ),
     },
+
     {
-      slug: 'sizes',
+      slug: 'rounded-sizes',
       faIconName: 'flask',
       title: 'rounded - white/black - sizes',
       center: true,
@@ -74,6 +75,61 @@ export default {
         },
       ]
     },
+
+    {
+      slug: 'flat-sizes',
+      faIconName: 'flask',
+      title: 'rounded - white/black - sizes',
+      center: true,
+      component: (
+        <DynaButton
+          onClick={() => console.log('button pressed')}
+        >dyna button</DynaButton>
+      ),
+      wrapperStyle:{
+        fontSize: "0px",
+      },
+      props: [
+        {
+          slug: 'small',
+          title: 'small',
+          props: {
+            style: EStyle.FLAT,
+            color: EColor.WHITE_BLACK,
+            size: ESize.SMALL,
+          } as IDynaButtonProps
+        },
+        {
+          slug: 'medium',
+          title: 'medium',
+          props: {
+            style: EStyle.FLAT,
+            color: EColor.WHITE_BLACK,
+            size: ESize.MEDIUM,
+          } as IDynaButtonProps
+        },
+        {
+          slug: 'large',
+          title: 'large',
+          props: {
+            style: EStyle.FLAT,
+            color: EColor.WHITE_BLACK,
+            size: ESize.LARGE,
+          } as IDynaButtonProps
+        },
+        {
+          slug: 'x-large',
+          title: 'x-large',
+          props: {
+            style: EStyle.FLAT,
+            color: EColor.WHITE_BLACK,
+            size: ESize.XLARGE,
+          } as IDynaButtonProps
+        },
+      ]
+    },
+
+
     {
       slug: 'colours',
       faIconName: 'flask',
@@ -86,8 +142,6 @@ export default {
       ),
       wrapperStyle:{
         fontSize: "0px",
-        padding: "45px",
-        backgroundColor: "grey",
       },
       props: [
         {

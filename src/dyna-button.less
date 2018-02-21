@@ -20,14 +20,58 @@
 					border-style: solid;
 					cursor: pointer;
 					transition: background-color 200ms ease-out;
-					&:active {
-						top: 1px;
-						left: 1px;
+				}
+				&.dnbtn-size- {
+					&SMALL {
+						button {
+							border-radius: 8px;
+							&:active {
+								top: 1px;
+								left: 1px;
+							}
+						}
+					}
+					&MEDIUM {
+						button {
+							border-radius: 16px;
+							&:active {
+								top: 1px;
+								left: 1px;
+							}
+						}
+					}
+					&LARGE {
+						button {
+							border-radius: 32px;
+							&:active {
+								top: 2px;
+								left: 2px;
+							}
+						}
+					}
+					&XLARGE {
+						button {
+							border-radius: 64px;
+							font-weight: bold;
+							&:active {
+								top: 2px;
+								left: 2px;
+							}
+						}
 					}
 				}
-
 			}
 
+			&FLAT {
+				font-size: 0;
+
+				button {
+					outline: none;
+					border-style: solid;
+					cursor: pointer;
+					transition: background-color 200ms ease-out;
+				}
+			}
 		}
 
 		&size- {
@@ -37,7 +81,6 @@
 					font-size: 8px;
 					line-height: 10px;
 					border-width: 1px;
-					border-radius: 8px;
 					font-weight: bold;
 				}
 			}
@@ -48,7 +91,6 @@
 					font-size: 14px;
 					line-height: 22px;
 					border-width: 1px;
-					border-radius: 16px;
 					font-weight: bold;
 				}
 			}
@@ -58,12 +100,7 @@
 					font-size: 26px;
 					line-height: 46px;
 					border-width: 1px;
-					border-radius: 32px;
 					font-weight: bold;
-					&:active {
-						top: 2px;
-						left: 2px;
-					}
 				}
 			}
 			&XLARGE {
@@ -72,12 +109,7 @@
 					font-size: 40px;
 					line-height: 92px;
 					border-width: 2px;
-					border-radius: 64px;
 					font-weight: bold;
-					&:active {
-						top: 2px;
-						left: 2px;
-					}
 				}
 			}
 		}
