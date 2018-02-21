@@ -133,9 +133,10 @@ var DynaButton = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     DynaButton.prototype.render = function () {
-        var _a = this.props, children = _a.children, style = _a.style, color = _a.color, size = _a.size, href = _a.href, onClick = _a.onClick;
+        var _a = this.props, cn = _a.className, children = _a.children, style = _a.style, color = _a.color, size = _a.size, href = _a.href, onClick = _a.onClick;
         var className = [
             'dyna-button',
+            cn || '',
             "dnbtn-style-" + style,
             "dnbtn-color-" + color,
             "dnbtn-size-" + size,
@@ -144,6 +145,7 @@ var DynaButton = /** @class */ (function (_super) {
             React.createElement("button", null, children)));
     };
     DynaButton.defaultProps = {
+        className: '',
         children: null,
         style: EStyle.ROUNDED,
         color: dyna_ui_styles_1.EColor.WHITE_BLACK,

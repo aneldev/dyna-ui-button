@@ -18,6 +18,7 @@ export enum ESize {
 }
 
 export interface IDynaButtonProps {
+  className?: string;
   children: any;
   style?: EStyle;
   color?: EColor;
@@ -28,6 +29,7 @@ export interface IDynaButtonProps {
 
 export class DynaButton extends React.Component<IDynaButtonProps> {
   static defaultProps: IDynaButtonProps = {
+    className: '',
     children: null,
     style: EStyle.ROUNDED,
     color: EColor.WHITE_BLACK,
@@ -38,11 +40,15 @@ export class DynaButton extends React.Component<IDynaButtonProps> {
 
   public render(): JSX.Element {
     const {
-      children, style, color, size, href, onClick
+      className: cn,
+      children,
+      style, color, size,
+      href, onClick
     } = this.props;
 
     const className: string = [
       'dyna-button',
+      cn || '',
       `dnbtn-style-${style}`,
       `dnbtn-color-${color}`,
       `dnbtn-size-${size}`,

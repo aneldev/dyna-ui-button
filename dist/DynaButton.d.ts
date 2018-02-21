@@ -13,6 +13,7 @@ export declare enum ESize {
     XLARGE = "XLARGE",
 }
 export interface IDynaButtonProps {
+    className?: string;
     children: any;
     style?: EStyle;
     color?: EColor;

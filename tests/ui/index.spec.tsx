@@ -14,7 +14,7 @@ describe('Home', () => {
 
   it('has expected content with deep render', () => {
     wrapper = enzyme.shallow(
-      <DynaButton>hello</DynaButton>,
+      <DynaButton className="hello-button">hello</DynaButton>,
       {}
     );
 
