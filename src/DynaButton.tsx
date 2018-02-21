@@ -48,7 +48,6 @@ export class DynaButton extends React.Component<IDynaButtonProps> {
 
     const className: string = [
       'dyna-button',
-      cn || '',
       `dnbtn-style-${style}`,
       `dnbtn-color-${color}`,
       `dnbtn-size-${size}`,
@@ -56,7 +55,7 @@ export class DynaButton extends React.Component<IDynaButtonProps> {
 
     return (
       <a className={className} href={href} onClick={onClick}>
-        <button>{children}</button>
+        <button className={cn || ''}>{children}</button>
       </a>
     );
   }

@@ -136,13 +136,12 @@ var DynaButton = /** @class */ (function (_super) {
         var _a = this.props, cn = _a.className, children = _a.children, style = _a.style, color = _a.color, size = _a.size, href = _a.href, onClick = _a.onClick;
         var className = [
             'dyna-button',
-            cn || '',
             "dnbtn-style-" + style,
             "dnbtn-color-" + color,
             "dnbtn-size-" + size,
         ].join(' ').trim();
         return (React.createElement("a", { className: className, href: href, onClick: onClick },
-            React.createElement("button", null, children)));
+            React.createElement("button", { className: cn || '' }, children)));
     };
     DynaButton.defaultProps = {
         className: '',
