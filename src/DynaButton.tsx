@@ -11,10 +11,12 @@ export enum EStyle {
 export {EColor}
 
 export enum ESize {
+  XSMALL = "XSMALL",
   SMALL = "SMALL",
   MEDIUM = "MEDIUM",
   LARGE = "LARGE",
   XLARGE = "XLARGE",
+  XXLARGE = "XXLARGE",
 }
 
 export interface IDynaButtonProps {

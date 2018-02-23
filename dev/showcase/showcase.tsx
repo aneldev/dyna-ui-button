@@ -38,6 +38,15 @@ export default {
       },
       props: [
         {
+          slug: 'xsmall',
+          title: 'xsmall',
+          props: {
+            style: EStyle.ROUNDED,
+            color: EColor.WHITE_BLACK,
+            size: ESize.XSMALL,
+          } as IDynaButtonProps
+        },
+        {
           slug: 'small',
           title: 'small',
           props: {
@@ -71,6 +80,15 @@ export default {
             style: EStyle.ROUNDED,
             color: EColor.WHITE_BLACK,
             size: ESize.XLARGE,
+          } as IDynaButtonProps
+        },
+        {
+          slug: 'xx-large',
+          title: 'xx-large',
+          props: {
+            style: EStyle.ROUNDED,
+            color: EColor.WHITE_BLACK,
+            size: ESize.XXLARGE,
           } as IDynaButtonProps
         },
       ]
@@ -91,6 +109,15 @@ export default {
       },
       props: [
         {
+          slug: 'xsmall',
+          title: 'xsmall',
+          props: {
+            style: EStyle.FLAT,
+            color: EColor.WHITE_BLACK,
+            size: ESize.XSMALL,
+          } as IDynaButtonProps
+        },
+        {
           slug: 'small',
           title: 'small',
           props: {
@@ -124,6 +151,15 @@ export default {
             style: EStyle.FLAT,
             color: EColor.WHITE_BLACK,
             size: ESize.XLARGE,
+          } as IDynaButtonProps
+        },
+        {
+          slug: 'xx-large',
+          title: 'xx-large',
+          props: {
+            style: EStyle.FLAT,
+            color: EColor.WHITE_BLACK,
+            size: ESize.XXLARGE,
           } as IDynaButtonProps
         },
       ]
