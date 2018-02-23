@@ -7,10 +7,12 @@ export declare enum EStyle {
 }
 export { EColor };
 export declare enum ESize {
+    XSMALL = "XSMALL",
     SMALL = "SMALL",
     MEDIUM = "MEDIUM",
     LARGE = "LARGE",
     XLARGE = "XLARGE",
+    XXLARGE = "XXLARGE",
 }
 export interface IDynaButtonProps {
     className?: string;
