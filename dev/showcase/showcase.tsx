@@ -28,13 +28,29 @@ export default {
       faIconName: 'flask',
       title: 'rounded - white/black - sizes',
       center: true,
-      component: (
-        <DynaButton
-          onClick={() => console.log('button pressed')}
-        >dyna button</DynaButton>
-      ),
+      component: (() => {
+        class MyApp extends React.Component {
+          public render(): JSX.Element {
+            return (
+              <div>
+                <h4>enabled</h4>
+                <DynaButton
+                  {...this.props}
+                  onClick={() => console.log('button pressed')}
+                >dyna button</DynaButton>
+                <h4>disabled</h4>
+                <DynaButton
+                  {...this.props}
+                  disabled
+                  onClick={() => console.log('button pressed')}
+                >dyna button</DynaButton>
+              </div>
+            );
+          }
+        }
+        return <MyApp />;
+      })(),
       wrapperStyle:{
-        fontSize: "0px",
       },
       props: [
         {
@@ -99,13 +115,29 @@ export default {
       faIconName: 'flask',
       title: 'rounded - white/black - sizes',
       center: true,
-      component: (
-        <DynaButton
-          onClick={() => console.log('button pressed')}
-        >dyna button</DynaButton>
-      ),
+      component: (() => {
+        class MyApp extends React.Component {
+          public render(): JSX.Element {
+            return (
+              <div>
+                <h4>enabled</h4>
+                <DynaButton
+                  {...this.props}
+                  onClick={() => console.log('button pressed')}
+                >dyna button</DynaButton>
+                <h4>disabled</h4>
+                <DynaButton
+                  {...this.props}
+                  disabled
+                  onClick={() => console.log('button pressed')}
+                >dyna button</DynaButton>
+              </div>
+            );
+          }
+        }
+        return <MyApp />;
+      })(),
       wrapperStyle:{
-        fontSize: "0px",
       },
       props: [
         {
@@ -171,13 +203,29 @@ export default {
       faIconName: 'flask',
       title: 'rounded - colours',
       center: true,
-      component: (
-        <DynaButton
-          onClick={() => console.log('button pressed')}
-        >dyna button</DynaButton>
-      ),
+      component: (() => {
+        class MyApp extends React.Component {
+          public render(): JSX.Element {
+            return (
+              <div>
+                <h4>enabled</h4>
+                <DynaButton
+                  {...this.props}
+                  onClick={() => console.log('button pressed')}
+                >dyna button</DynaButton>
+                <h4>disabled</h4>
+                <DynaButton
+                  {...this.props}
+                  disabled
+                  onClick={() => console.log('button pressed')}
+                >dyna button</DynaButton>
+              </div>
+            );
+          }
+        }
+        return <MyApp />;
+      })(),
       wrapperStyle:{
-        fontSize: "0px",
       },
       props: [
         {

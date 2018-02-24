@@ -162,6 +162,10 @@
 					&:active{
 						background-color: @color-WHITE_BLACK-background-3;
 					}
+					&:disabled{
+						border-color: fade(@color-WHITE_BLACK-foreground-1, 70%);
+						color: fade(@color-WHITE_BLACK-foreground-3, 50%);
+					}
 				}
 			}
 			&WHITE_RED {
@@ -174,6 +178,10 @@
 					}
 					&:active{
 						background-color: @color-WHITE_RED-background-3;
+					}
+					&:disabled{
+						border-color: fade(@color-WHITE_RED-foreground-1, 70%);
+						color: fade(@color-WHITE_RED-foreground-1, 50%);
 					}
 				}
 			}
@@ -188,6 +196,10 @@
 					&:active{
 						background-color: @color-BLACK_WHITE-background-3;
 					}
+					&:disabled{
+						border-color: fade(@color-BLACK_WHITE-background-1, 70%);
+						color: fade(@color-BLACK_WHITE-foreground-1, 50%);
+					}
 				}
 			}
 			&ORANGE_WHITE {
@@ -200,6 +212,10 @@
 					}
 					&:active{
 						background-color: @color-ORANGE_WHITE-background-3;
+					}
+					&:disabled{
+						border-color: fade(@color-ORANGE_WHITE-background-1, 70%);
+						color: fade(@color-ORANGE_WHITE-foreground-1, 50%);
 					}
 				}
 			}
@@ -215,6 +231,10 @@
 						background-color: @color-BLACK_ORANGE-background-3;
 						color: @color-BLACK_ORANGE-foreground-3;
 					}
+					&:disabled{
+						border-color: fade(@color-BLACK_ORANGE-foreground-1, 70%);
+						color: fade(@color-BLACK_ORANGE-foreground-1, 50%);
+					}
 				}
 			}
 			&TRANSPARENT_WHITE {
@@ -229,6 +249,10 @@
 					&:active{
 						border-color: @color-BLACK_WHITE-foreground-3;
 						color: @color-BLACK_WHITE-foreground-3;
+					}
+					&:disabled{
+						border-color: fade(@color-BLACK_WHITE-foreground-1, 70%);
+						color: fade(@color-BLACK_WHITE-foreground-1, 50%);
 					}
 				}
 			}

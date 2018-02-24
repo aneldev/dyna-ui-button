@@ -25,6 +25,7 @@ export interface IDynaButtonProps {
   style?: EStyle;
   color?: EColor;
   size?: ESize;
+  disabled?: boolean;
   href?: string
   onClick?: () => void;
 }
@@ -36,6 +37,7 @@ export class DynaButton extends React.Component<IDynaButtonProps> {
     style: EStyle.ROUNDED,
     color: EColor.WHITE_BLACK,
     size: ESize.MEDIUM,
+    disabled: false,
     href: null,
     onClick: () => undefined,
   };
@@ -45,6 +47,7 @@ export class DynaButton extends React.Component<IDynaButtonProps> {
       className: cn,
       children,
       style, color, size,
+      disabled,
       href, onClick
     } = this.props;
 
@@ -57,7 +60,10 @@ export class DynaButton extends React.Component<IDynaButtonProps> {
 
     return (
       <a className={className} href={href} onClick={onClick}>
-        <button className={cn || ''}>{children}</button>
+        <button
+          className={cn || ''}
+          disabled={disabled}
+        >{children}</button>
       </a>
     );
   }

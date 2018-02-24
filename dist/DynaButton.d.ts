@@ -20,6 +20,7 @@ export interface IDynaButtonProps {
     style?: EStyle;
     color?: EColor;
     size?: ESize;
+    disabled?: boolean;
     href?: string;
     onClick?: () => void;
 }
