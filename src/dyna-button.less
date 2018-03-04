@@ -1,7 +1,10 @@
 @import (reference) "~dyna-ui-styles/styles/WHITE_BLACK";
 @import (reference) "~dyna-ui-styles/styles/WHITE_RED";
+@import (reference) "~dyna-ui-styles/styles/RED_WHITE";
 @import (reference) "~dyna-ui-styles/styles/BLACK_WHITE";
+@import (reference) "~dyna-ui-styles/styles/GREY_WHITE";
 @import (reference) "~dyna-ui-styles/styles/ORANGE_WHITE";
+@import (reference) "~dyna-ui-styles/styles/WHITE_ORANGE";
 @import (reference) "~dyna-ui-styles/styles/BLACK_ORANGE";
 
 .dyna-button {
@@ -202,9 +205,60 @@
 					}
 				}
 			}
+			&GREY_WHITE {
+				button {
+					border-color: @color-GREY_WHITE-background-3;
+					background: @color-GREY_WHITE-background-1;
+					color: @color-GREY_WHITE-foreground-1;
+					&:hover{
+						background-color: @color-GREY_WHITE-background-2;
+					}
+					&:active{
+						background-color: @color-GREY_WHITE-background-3;
+					}
+					&:disabled{
+						border-color: fade(@color-GREY_WHITE-background-3, 70%);
+						color: fade(@color-GREY_WHITE-foreground-1, 50%);
+					}
+				}
+			}
+			&RED_WHITE {
+				button {
+					border-color: @color-RED_WHITE-background-3;
+					background: @color-RED_WHITE-background-1;
+					color: @color-RED_WHITE-foreground-1;
+					&:hover{
+						background-color: @color-RED_WHITE-background-2;
+					}
+					&:active{
+						background-color: @color-RED_WHITE-background-3;
+					}
+					&:disabled{
+						border-color: fade(@color-RED_WHITE-background-3, 70%);
+						color: fade(@color-RED_WHITE-foreground-1, 50%);
+					}
+				}
+			}
+			&TRANSPARENT_ORANGE {
+				button {
+					border-color: @color-WHITE_ORANGE-foreground-1;
+					background: transparent;
+					color: @color-WHITE_ORANGE-foreground-1;
+					&:hover{
+						color: @color-WHITE_ORANGE-foreground-2;
+					}
+					&:active{
+						color: @color-WHITE_ORANGE-foreground-3;
+					}
+					&:disabled{
+						border-color: fade(@color-WHITE_ORANGE-foreground-1, 70%);
+						color: fade(@color-WHITE_ORANGE-foreground-1, 50%);
+					}
+				}
+			}
 			&ORANGE_WHITE {
 				button {
-					border-color: @color-ORANGE_WHITE-background-1;
+					border-color: @color-ORANGE_WHITE-background-3;
 					background: @color-ORANGE_WHITE-background-1;
 					color: @color-ORANGE_WHITE-foreground-1;
 					&:hover{
@@ -214,8 +268,25 @@
 						background-color: @color-ORANGE_WHITE-background-3;
 					}
 					&:disabled{
-						border-color: fade(@color-ORANGE_WHITE-background-1, 70%);
+						border-color: fade(@color-ORANGE_WHITE-background-3, 70%);
 						color: fade(@color-ORANGE_WHITE-foreground-1, 50%);
+					}
+				}
+			}
+			&WHITE_ORANGE {
+				button {
+					border-color: @color-WHITE_ORANGE-foreground-1;
+					background: @color-WHITE_ORANGE-background-1;
+					color: @color-WHITE_ORANGE-foreground-1;
+					&:hover{
+						background-color: @color-WHITE_ORANGE-background-2;
+					}
+					&:active{
+						background-color: @color-WHITE_ORANGE-background-3;
+					}
+					&:disabled{
+						border-color: fade(@color-WHITE_ORANGE-foreground-2, 70%);
+						color: fade(@color-WHITE_ORANGE-foreground-1, 50%);
 					}
 				}
 			}

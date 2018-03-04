@@ -3,6 +3,7 @@ import {DynaButton, EColor, ESize, EStyle, IDynaButtonProps} from "../../src";
 
 import {faIcon, IShowcase} from "dyna-showcase";
 import {Logo} from "../logo";
+import {IShowcaseViewProps} from "dyna-showcase/dist/interfaces";
 
 require('./showcase.less');
 
@@ -30,260 +31,56 @@ export default {
       center: true,
       component: (() => {
         class MyApp extends React.Component {
-          public render(): JSX.Element {
+          private renderButtonEnabledDisabled(key:number, size: ESize): JSX.Element {
             return (
-              <div>
-                <h4>enabled</h4>
+              <div className="button-container" key={key}>
                 <DynaButton
                   {...this.props}
+                  size={size}
                   onClick={() => console.log('button pressed')}
-                >dyna button</DynaButton>
-                <h4>disabled</h4>
+                >Enabled {size.toLowerCase()}</DynaButton>
                 <DynaButton
                   {...this.props}
+                  size={size}
                   disabled
                   onClick={() => console.log('button pressed')}
-                >dyna button</DynaButton>
+                >Disabled {size.toLowerCase()}</DynaButton>
               </div>
+
             );
+          }
+
+          public renderSizes(): JSX.Element[] {
+            return Object.keys(ESize).map((size: ESize, index:number) => {
+              return this.renderButtonEnabledDisabled(index, size);
+            });
+          }
+
+          public render(): JSX.Element[] {
+            return this.renderSizes();
           }
         }
         return <MyApp />;
       })(),
       wrapperStyle:{
       },
-      props: [
-        {
-          slug: 'xsmall',
-          title: 'xsmall',
-          props: {
-            style: EStyle.ROUNDED,
-            color: EColor.WHITE_BLACK,
-            size: ESize.XSMALL,
-          } as IDynaButtonProps
-        },
-        {
-          slug: 'small',
-          title: 'small',
-          props: {
-            style: EStyle.ROUNDED,
-            color: EColor.WHITE_BLACK,
-            size: ESize.SMALL,
-          } as IDynaButtonProps
-        },
-        {
-          slug: 'medium',
-          title: 'medium',
-          props: {
-            style: EStyle.ROUNDED,
-            color: EColor.WHITE_BLACK,
-            size: ESize.MEDIUM,
-          } as IDynaButtonProps
-        },
-        {
-          slug: 'large',
-          title: 'large',
-          props: {
-            style: EStyle.ROUNDED,
-            color: EColor.WHITE_BLACK,
-            size: ESize.LARGE,
-          } as IDynaButtonProps
-        },
-        {
-          slug: 'x-large',
-          title: 'x-large',
-          props: {
-            style: EStyle.ROUNDED,
-            color: EColor.WHITE_BLACK,
-            size: ESize.XLARGE,
-          } as IDynaButtonProps
-        },
-        {
-          slug: 'xx-large',
-          title: 'xx-large',
-          props: {
-            style: EStyle.ROUNDED,
-            color: EColor.WHITE_BLACK,
-            size: ESize.XXLARGE,
-          } as IDynaButtonProps
-        },
-      ]
-    },
-
-    {
-      slug: 'flat-sizes',
-      faIconName: 'flask',
-      title: 'rounded - white/black - sizes',
-      center: true,
-      component: (() => {
-        class MyApp extends React.Component {
-          public render(): JSX.Element {
-            return (
-              <div>
-                <h4>enabled</h4>
-                <DynaButton
-                  {...this.props}
-                  onClick={() => console.log('button pressed')}
-                >dyna button</DynaButton>
-                <h4>disabled</h4>
-                <DynaButton
-                  {...this.props}
-                  disabled
-                  onClick={() => console.log('button pressed')}
-                >dyna button</DynaButton>
-              </div>
-            );
-          }
-        }
-        return <MyApp />;
+      props: (() => {
+        const props: IShowcaseViewProps[] = [];
+        Object.keys(EStyle).forEach((style: EStyle) => {
+          Object.keys(EColor).forEach((color: EColor) => {
+            props.push({
+              slug: `style-${style}-color-${color}`,
+              title: `Style ${style} Color-${color}`,
+              props: {
+                style, color,
+              }
+            } as IShowcaseViewProps);
+          });
+        });
+        return props;
       })(),
-      wrapperStyle:{
-      },
-      props: [
-        {
-          slug: 'xsmall',
-          title: 'xsmall',
-          props: {
-            style: EStyle.FLAT,
-            color: EColor.WHITE_BLACK,
-            size: ESize.XSMALL,
-          } as IDynaButtonProps
-        },
-        {
-          slug: 'small',
-          title: 'small',
-          props: {
-            style: EStyle.FLAT,
-            color: EColor.WHITE_BLACK,
-            size: ESize.SMALL,
-          } as IDynaButtonProps
-        },
-        {
-          slug: 'medium',
-          title: 'medium',
-          props: {
-            style: EStyle.FLAT,
-            color: EColor.WHITE_BLACK,
-            size: ESize.MEDIUM,
-          } as IDynaButtonProps
-        },
-        {
-          slug: 'large',
-          title: 'large',
-          props: {
-            style: EStyle.FLAT,
-            color: EColor.WHITE_BLACK,
-            size: ESize.LARGE,
-          } as IDynaButtonProps
-        },
-        {
-          slug: 'x-large',
-          title: 'x-large',
-          props: {
-            style: EStyle.FLAT,
-            color: EColor.WHITE_BLACK,
-            size: ESize.XLARGE,
-          } as IDynaButtonProps
-        },
-        {
-          slug: 'xx-large',
-          title: 'xx-large',
-          props: {
-            style: EStyle.FLAT,
-            color: EColor.WHITE_BLACK,
-            size: ESize.XXLARGE,
-          } as IDynaButtonProps
-        },
-      ]
     },
 
-
-    {
-      slug: 'colours',
-      faIconName: 'flask',
-      title: 'rounded - colours',
-      center: true,
-      component: (() => {
-        class MyApp extends React.Component {
-          public render(): JSX.Element {
-            return (
-              <div>
-                <h4>enabled</h4>
-                <DynaButton
-                  {...this.props}
-                  onClick={() => console.log('button pressed')}
-                >dyna button</DynaButton>
-                <h4>disabled</h4>
-                <DynaButton
-                  {...this.props}
-                  disabled
-                  onClick={() => console.log('button pressed')}
-                >dyna button</DynaButton>
-              </div>
-            );
-          }
-        }
-        return <MyApp />;
-      })(),
-      wrapperStyle:{
-      },
-      props: [
-        {
-          slug: 'white-black',
-          title: 'white-black',
-          props: {
-            style: EStyle.ROUNDED,
-            color: EColor.WHITE_BLACK,
-            size: ESize.MEDIUM,
-          } as IDynaButtonProps
-        },
-        {
-          slug: 'black-white',
-          title: 'black-white',
-          props: {
-            style: EStyle.ROUNDED,
-            color: EColor.BLACK_WHITE,
-            size: ESize.MEDIUM,
-          } as IDynaButtonProps
-        },
-        {
-          slug: 'transparent-white',
-          title: 'transparent-white',
-          props: {
-            style: EStyle.ROUNDED,
-            color: EColor.TRANSPARENT_WHITE,
-            size: ESize.MEDIUM,
-          } as IDynaButtonProps
-        },
-        {
-          slug: 'white-red',
-          title: 'white-red',
-          props: {
-            style: EStyle.ROUNDED,
-            color: EColor.WHITE_RED,
-            size: ESize.MEDIUM,
-          } as IDynaButtonProps
-        },
-        {
-          slug: 'orange-white',
-          title: 'orange-white',
-          props: {
-            style: EStyle.ROUNDED,
-            color: EColor.ORANGE_WHITE,
-            size: ESize.MEDIUM,
-          } as IDynaButtonProps
-        },
-        {
-          slug: 'black-orange',
-          title: 'black-orange',
-          props: {
-            style: EStyle.ROUNDED,
-            color: EColor.BLACK_ORANGE,
-            size: ESize.MEDIUM,
-          } as IDynaButtonProps
-        },
-      ]
-    },
     {
       slug: 'the-end',
       title: 'the end',
