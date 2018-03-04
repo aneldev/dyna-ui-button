@@ -38,15 +38,14 @@ export default {
                   {...this.props}
                   size={size}
                   onClick={() => console.log('button pressed')}
-                >Enabled {size.toLowerCase()}</DynaButton>
+                ><span>Enabled {size.toLowerCase()}</span></DynaButton>
                 <DynaButton
                   {...this.props}
                   size={size}
                   disabled
-                  onClick={() => console.log('button pressed')}
-                >Disabled {size.toLowerCase()}</DynaButton>
+                  onClick={() => console.error('disabled button pressed, this shouldn\'t happen')}
+                ><span>Disabled {size.toLowerCase()}</span></DynaButton>
               </div>
-
             );
           }
 

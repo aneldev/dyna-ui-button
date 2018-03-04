@@ -26,5 +26,6 @@ export interface IDynaButtonProps {
 }
 export declare class DynaButton extends React.Component<IDynaButtonProps> {
     static defaultProps: IDynaButtonProps;
+    private handleClick();
     render(): JSX.Element;
 }

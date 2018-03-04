@@ -42,6 +42,12 @@ export class DynaButton extends React.Component<IDynaButtonProps> {
     onClick: () => undefined,
   };
 
+  private handleClick():void{
+    const {disabled, onClick} = this.props;
+    if (disabled) return;
+    onClick();
+  }
+
   public render(): JSX.Element {
     const {
       className: cn,
@@ -59,7 +65,7 @@ export class DynaButton extends React.Component<IDynaButtonProps> {
     ].join(' ').trim();
 
     return (
-      <a className={className} href={href} onClick={onClick}>
+      <a className={className} href={href} onClick={this.handleClick.bind(this)}>
         <button
           className={cn || ''}
           disabled={disabled}

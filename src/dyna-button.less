@@ -10,6 +10,14 @@
 .dyna-button {
 	outline: none;
 
+	button {
+		user-select: none;
+
+		&:disabled {
+			pointer-events: none;
+		}
+	}
+
 	&.dnbtn- {
 
 		&style- {
@@ -56,8 +64,8 @@
 						button {
 							border-radius: 32px;
 							&:active {
-								top: 2px;
-								left: 2px;
+								top: 1px;
+								left: 1px;
 							}
 						}
 					}
@@ -66,8 +74,8 @@
 							border-radius: 64px;
 							font-weight: bold;
 							&:active {
-								top: 2px;
-								left: 2px;
+								top: 1px;
+								left: 1px;
 							}
 						}
 					}
@@ -76,8 +84,8 @@
 							border-radius: 64px;
 							font-weight: bold;
 							&:active {
-								top: 3px;
-								left: 3px;
+								top: 2px;
+								left: 2px;
 							}
 						}
 					}
@@ -137,7 +145,7 @@
 				button {
 					padding: 0 38px;
 					font-size: 28px;
-					line-height: 60px;
+					line-height: 52px;
 					border-width: 2px;
 					font-weight: bold;
 				}
@@ -145,7 +153,7 @@
 			&XXLARGE {
 				button {
 					padding: 0 42px;
-					font-size: 30px;
+					font-size: 32px;
 					line-height: 60px;
 					border-width: 2px;
 					font-weight: bold;
