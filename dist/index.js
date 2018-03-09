@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"));
+		module.exports = factory(require("react"), require("dyna-ui-styles"));
 	else if(typeof define === 'function' && define.amd)
-		define("dyna-ui-button", ["react"], factory);
+		define("dyna-ui-button", ["react", "dyna-ui-styles"], factory);
 	else if(typeof exports === 'object')
-		exports["dyna-ui-button"] = factory(require("react"));
+		exports["dyna-ui-button"] = factory(require("react"), require("dyna-ui-styles"));
 	else
-		root["dyna-ui-button"] = factory(root["react"]);
-})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_3__) {
+		root["dyna-ui-button"] = factory(root["react"], root["dyna-ui-styles"]);
+})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_4__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -114,7 +114,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(3);
 var dyna_ui_styles_1 = __webpack_require__(4);
 exports.EColor = dyna_ui_styles_1.EColor;
-__webpack_require__(6);
+__webpack_require__(5);
 var EStyle;
 (function (EStyle) {
     EStyle["ROUNDED"] = "ROUNDED";
@@ -174,175 +174,18 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_3__;
 
 /***/ }),
 /* 4 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-/* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-(function webpackUniversalModuleDefinition(root, factory) {
-  if (( false ? 'undefined' : _typeof(exports)) === 'object' && ( false ? 'undefined' : _typeof(module)) === 'object') module.exports = factory();else if (true) !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));else if ((typeof exports === 'undefined' ? 'undefined' : _typeof(exports)) === 'object') exports["dyna-ui-styles"] = factory();else root["dyna-ui-styles"] = factory();
-})(undefined, function () {
-  return (/******/function (modules) {
-      // webpackBootstrap
-      /******/ // The module cache
-      /******/var installedModules = {};
-      /******/
-      /******/ // The require function
-      /******/function __webpack_require__(moduleId) {
-        /******/
-        /******/ // Check if module is in cache
-        /******/if (installedModules[moduleId]) {
-          /******/return installedModules[moduleId].exports;
-          /******/
-        }
-        /******/ // Create a new module (and put it into the cache)
-        /******/var module = installedModules[moduleId] = {
-          /******/i: moduleId,
-          /******/l: false,
-          /******/exports: {}
-          /******/ };
-        /******/
-        /******/ // Execute the module function
-        /******/modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-        /******/
-        /******/ // Flag the module as loaded
-        /******/module.l = true;
-        /******/
-        /******/ // Return the exports of the module
-        /******/return module.exports;
-        /******/
-      }
-      /******/
-      /******/
-      /******/ // expose the modules object (__webpack_modules__)
-      /******/__webpack_require__.m = modules;
-      /******/
-      /******/ // expose the module cache
-      /******/__webpack_require__.c = installedModules;
-      /******/
-      /******/ // identity function for calling harmony imports with the correct context
-      /******/__webpack_require__.i = function (value) {
-        return value;
-      };
-      /******/
-      /******/ // define getter function for harmony exports
-      /******/__webpack_require__.d = function (exports, name, getter) {
-        /******/if (!__webpack_require__.o(exports, name)) {
-          /******/Object.defineProperty(exports, name, {
-            /******/configurable: false,
-            /******/enumerable: true,
-            /******/get: getter
-            /******/ });
-          /******/
-        }
-        /******/
-      };
-      /******/
-      /******/ // getDefaultExport function for compatibility with non-harmony modules
-      /******/__webpack_require__.n = function (module) {
-        /******/var getter = module && module.__esModule ?
-        /******/function getDefault() {
-          return module['default'];
-        } :
-        /******/function getModuleExports() {
-          return module;
-        };
-        /******/__webpack_require__.d(getter, 'a', getter);
-        /******/return getter;
-        /******/
-      };
-      /******/
-      /******/ // Object.prototype.hasOwnProperty.call
-      /******/__webpack_require__.o = function (object, property) {
-        return Object.prototype.hasOwnProperty.call(object, property);
-      };
-      /******/
-      /******/ // __webpack_public_path__
-      /******/__webpack_require__.p = "/dist/";
-      /******/
-      /******/ // Load entry module and return exports
-      /******/return __webpack_require__(__webpack_require__.s = 1);
-      /******/
-    }(
-    /************************************************************************/
-    /******/[
-    /* 0 */
-    /***/function (module, exports, __webpack_require__) {
-
-      "use strict";
-
-      Object.defineProperty(exports, "__esModule", { value: true });
-      var EColor;
-      (function (EColor) {
-        EColor["BLACK_WHITE"] = "BLACK_WHITE";
-        EColor["BLACK_ORANGE"] = "BLACK_ORANGE";
-        EColor["TRANSPARENT_ORANGE"] = "TRANSPARENT_ORANGE";
-        EColor["TRANSPARENT_WHITE"] = "TRANSPARENT_WHITE";
-        EColor["ORANGE_WHITE"] = "ORANGE_WHITE";
-        EColor["RED_WHITE"] = "RED_WHITE";
-        EColor["GREY_WHITE"] = "GREY_WHITE";
-        EColor["WHITE_BLACK"] = "WHITE_BLACK";
-        EColor["WHITE_RED"] = "WHITE_RED";
-        EColor["WHITE_ORANGE"] = "WHITE_ORANGE";
-      })(EColor = exports.EColor || (exports.EColor = {}));
-
-      /***/
-    },
-    /* 1 */
-    /***/function (module, exports, __webpack_require__) {
-
-      module.exports = __webpack_require__(0);
-
-      /***/
-    }]
-    /******/)
-  );
-});
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)(module)))
+module.exports = __WEBPACK_EXTERNAL_MODULE_4__;
 
 /***/ }),
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-module.exports = function (module) {
-	if (!module.webpackPolyfill) {
-		module.deprecate = function () {};
-		module.paths = [];
-		// module.parent = undefined by default
-		if (!module.children) module.children = [];
-		Object.defineProperty(module, "loaded", {
-			enumerable: true,
-			get: function get() {
-				return module.l;
-			}
-		});
-		Object.defineProperty(module, "id", {
-			enumerable: true,
-			get: function get() {
-				return module.i;
-			}
-		});
-		module.webpackPolyfill = 1;
-	}
-	return module;
-};
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(7);
+var content = __webpack_require__(6);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -350,7 +193,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(9)(content, options);
+var update = __webpack_require__(8)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -367,21 +210,21 @@ if(false) {
 }
 
 /***/ }),
-/* 7 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(8)(false);
+exports = module.exports = __webpack_require__(7)(false);
 // imports
 
 
 // module
-exports.push([module.i, ".dyna-button {\n  outline: none;\n}\n.dyna-button button {\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n.dyna-button button:disabled {\n  pointer-events: none;\n}\n.dyna-button.dnbtn-style-ROUNDED {\n  font-size: 0;\n}\n.dyna-button.dnbtn-style-ROUNDED button {\n  position: relative;\n  outline: none;\n  border-style: solid;\n  cursor: pointer;\n  -webkit-transition: background-color 200ms ease-out;\n  transition: background-color 200ms ease-out;\n}\n.dyna-button.dnbtn-style-ROUNDED.dnbtn-size-XSMALL button {\n  border-radius: 8px;\n}\n.dyna-button.dnbtn-style-ROUNDED.dnbtn-size-XSMALL button:active {\n  top: 1px;\n  left: 1px;\n}\n.dyna-button.dnbtn-style-ROUNDED.dnbtn-size-SMALL button {\n  border-radius: 14px;\n}\n.dyna-button.dnbtn-style-ROUNDED.dnbtn-size-SMALL button:active {\n  top: 1px;\n  left: 1px;\n}\n.dyna-button.dnbtn-style-ROUNDED.dnbtn-size-MEDIUM button {\n  border-radius: 16px;\n}\n.dyna-button.dnbtn-style-ROUNDED.dnbtn-size-MEDIUM button:active {\n  top: 1px;\n  left: 1px;\n}\n.dyna-button.dnbtn-style-ROUNDED.dnbtn-size-LARGE button {\n  border-radius: 32px;\n}\n.dyna-button.dnbtn-style-ROUNDED.dnbtn-size-LARGE button:active {\n  top: 1px;\n  left: 1px;\n}\n.dyna-button.dnbtn-style-ROUNDED.dnbtn-size-XLARGE button {\n  border-radius: 64px;\n  font-weight: bold;\n}\n.dyna-button.dnbtn-style-ROUNDED.dnbtn-size-XLARGE button:active {\n  top: 1px;\n  left: 1px;\n}\n.dyna-button.dnbtn-style-ROUNDED.dnbtn-size-XXLARGE button {\n  border-radius: 64px;\n  font-weight: bold;\n}\n.dyna-button.dnbtn-style-ROUNDED.dnbtn-size-XXLARGE button:active {\n  top: 2px;\n  left: 2px;\n}\n.dyna-button.dnbtn-style-FLAT {\n  font-size: 0;\n}\n.dyna-button.dnbtn-style-FLAT button {\n  outline: none;\n  border-style: solid;\n  cursor: pointer;\n  -webkit-transition: background-color 200ms ease-out;\n  transition: background-color 200ms ease-out;\n}\n.dyna-button.dnbtn-size-XSMALL button {\n  padding: 1px 8px 0 8px;\n  font-size: 8px;\n  line-height: 13px;\n  border-width: 1px;\n  font-weight: bold;\n}\n.dyna-button.dnbtn-size-SMALL button {\n  padding: 1px 8px 0 8px;\n  font-size: 10px;\n  line-height: 25px;\n  border-width: 1px;\n  font-weight: bold;\n}\n.dyna-button.dnbtn-size-MEDIUM button {\n  padding: 0 16px;\n  font-size: 12px;\n  line-height: 30px;\n  border-width: 1px;\n  font-weight: bold;\n}\n.dyna-button.dnbtn-size-LARGE button {\n  padding: 0 32px;\n  font-size: 22px;\n  line-height: 46px;\n  border-width: 1px;\n  font-weight: bold;\n}\n.dyna-button.dnbtn-size-XLARGE button {\n  padding: 0 38px;\n  font-size: 28px;\n  line-height: 52px;\n  border-width: 2px;\n  font-weight: bold;\n}\n.dyna-button.dnbtn-size-XXLARGE button {\n  padding: 0 42px;\n  font-size: 32px;\n  line-height: 60px;\n  border-width: 2px;\n  font-weight: bold;\n}\n.dyna-button.dnbtn-color-WHITE_BLACK button {\n  border-color: #222223;\n  background: #D0D3D4;\n  color: #222223;\n}\n.dyna-button.dnbtn-color-WHITE_BLACK button:hover {\n  background-color: #C1C6C8;\n}\n.dyna-button.dnbtn-color-WHITE_BLACK button:active {\n  background-color: #A2AAAD;\n}\n.dyna-button.dnbtn-color-WHITE_BLACK button:disabled {\n  border-color: rgba(34, 34, 35, 0.7);\n  color: rgba(33, 39, 33, 0.5);\n}\n.dyna-button.dnbtn-color-WHITE_RED button {\n  border-color: #E4002B;\n  background: #D0D3D4;\n  color: #E4002B;\n}\n.dyna-button.dnbtn-color-WHITE_RED button:hover {\n  background-color: #C1C6C8;\n}\n.dyna-button.dnbtn-color-WHITE_RED button:active {\n  background-color: #A2AAAD;\n}\n.dyna-button.dnbtn-color-WHITE_RED button:disabled {\n  border-color: rgba(228, 0, 43, 0.7);\n  color: rgba(228, 0, 43, 0.5);\n}\n.dyna-button.dnbtn-color-BLACK_WHITE button {\n  border-color: #222223;\n  background: #222223;\n  color: #D0D3D4;\n}\n.dyna-button.dnbtn-color-BLACK_WHITE button:hover {\n  background-color: #101820;\n}\n.dyna-button.dnbtn-color-BLACK_WHITE button:active {\n  background-color: #212721;\n}\n.dyna-button.dnbtn-color-BLACK_WHITE button:disabled {\n  border-color: rgba(34, 34, 35, 0.7);\n  color: rgba(208, 211, 212, 0.5);\n}\n.dyna-button.dnbtn-color-GREY_WHITE button {\n  border-color: #7E7F74;\n  background: #51534A;\n  color: #D0D3D4;\n}\n.dyna-button.dnbtn-color-GREY_WHITE button:hover {\n  background-color: #65665C;\n}\n.dyna-button.dnbtn-color-GREY_WHITE button:active {\n  background-color: #7E7F74;\n}\n.dyna-button.dnbtn-color-GREY_WHITE button:disabled {\n  border-color: rgba(126, 127, 116, 0.7);\n  color: rgba(208, 211, 212, 0.5);\n}\n.dyna-button.dnbtn-color-RED_WHITE button {\n  border-color: #A6192E;\n  background: #E4002B;\n  color: #D0D3D4;\n}\n.dyna-button.dnbtn-color-RED_WHITE button:hover {\n  background-color: #C8102E;\n}\n.dyna-button.dnbtn-color-RED_WHITE button:active {\n  background-color: #A6192E;\n}\n.dyna-button.dnbtn-color-RED_WHITE button:disabled {\n  border-color: rgba(166, 25, 46, 0.7);\n  color: rgba(208, 211, 212, 0.5);\n}\n.dyna-button.dnbtn-color-TRANSPARENT_ORANGE button {\n  border-color: #FF6900;\n  background: transparent;\n  color: #FF6900;\n}\n.dyna-button.dnbtn-color-TRANSPARENT_ORANGE button:hover {\n  color: #FF8F1C;\n}\n.dyna-button.dnbtn-color-TRANSPARENT_ORANGE button:active {\n  color: #FFAE62;\n}\n.dyna-button.dnbtn-color-TRANSPARENT_ORANGE button:disabled {\n  border-color: rgba(255, 105, 0, 0.7);\n  color: rgba(255, 105, 0, 0.5);\n}\n.dyna-button.dnbtn-color-ORANGE_WHITE button {\n  border-color: #FFAE62;\n  background: #FF6900;\n  color: #D9D9D6;\n}\n.dyna-button.dnbtn-color-ORANGE_WHITE button:hover {\n  background-color: #FF8F1C;\n}\n.dyna-button.dnbtn-color-ORANGE_WHITE button:active {\n  background-color: #FFAE62;\n}\n.dyna-button.dnbtn-color-ORANGE_WHITE button:disabled {\n  border-color: rgba(255, 174, 98, 0.7);\n  color: rgba(217, 217, 214, 0.5);\n}\n.dyna-button.dnbtn-color-WHITE_ORANGE button {\n  border-color: #FF6900;\n  background: #D9D9D6;\n  color: #FF6900;\n}\n.dyna-button.dnbtn-color-WHITE_ORANGE button:hover {\n  background-color: #D0D0CE;\n}\n.dyna-button.dnbtn-color-WHITE_ORANGE button:active {\n  background-color: #C8C9C7;\n}\n.dyna-button.dnbtn-color-WHITE_ORANGE button:disabled {\n  border-color: rgba(255, 143, 28, 0.7);\n  color: rgba(255, 105, 0, 0.5);\n}\n.dyna-button.dnbtn-color-BLACK_ORANGE button {\n  border-color: #FF6900;\n  background: #222223;\n  color: #FF6900;\n}\n.dyna-button.dnbtn-color-BLACK_ORANGE button:hover {\n  background-color: #101820;\n}\n.dyna-button.dnbtn-color-BLACK_ORANGE button:active {\n  background-color: #212721;\n  color: #FFAE62;\n}\n.dyna-button.dnbtn-color-BLACK_ORANGE button:disabled {\n  border-color: rgba(255, 105, 0, 0.7);\n  color: rgba(255, 105, 0, 0.5);\n}\n.dyna-button.dnbtn-color-TRANSPARENT_WHITE button {\n  border-color: #D0D3D4;\n  background: transparent;\n  color: #D0D3D4;\n}\n.dyna-button.dnbtn-color-TRANSPARENT_WHITE button:hover {\n  border-color: #C1C6C8;\n  color: #C1C6C8;\n}\n.dyna-button.dnbtn-color-TRANSPARENT_WHITE button:active {\n  border-color: #A2AAAD;\n  color: #A2AAAD;\n}\n.dyna-button.dnbtn-color-TRANSPARENT_WHITE button:disabled {\n  border-color: rgba(208, 211, 212, 0.7);\n  color: rgba(208, 211, 212, 0.5);\n}\n", ""]);
+exports.push([module.i, ".dyna-button {\n  outline: none;\n}\n.dyna-button button {\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n.dyna-button button:disabled {\n  pointer-events: none;\n}\n.dyna-button.dnbtn-style-ROUNDED {\n  font-size: 0;\n}\n.dyna-button.dnbtn-style-ROUNDED button {\n  position: relative;\n  outline: none;\n  border-style: solid;\n  cursor: pointer;\n  -webkit-transition: background-color 200ms ease-out;\n  transition: background-color 200ms ease-out;\n}\n.dyna-button.dnbtn-style-ROUNDED.dnbtn-size-XSMALL button {\n  border-radius: 8px;\n}\n.dyna-button.dnbtn-style-ROUNDED.dnbtn-size-XSMALL button:active {\n  top: 1px;\n  left: 1px;\n}\n.dyna-button.dnbtn-style-ROUNDED.dnbtn-size-SMALL button {\n  border-radius: 14px;\n}\n.dyna-button.dnbtn-style-ROUNDED.dnbtn-size-SMALL button:active {\n  top: 1px;\n  left: 1px;\n}\n.dyna-button.dnbtn-style-ROUNDED.dnbtn-size-MEDIUM button {\n  border-radius: 16px;\n}\n.dyna-button.dnbtn-style-ROUNDED.dnbtn-size-MEDIUM button:active {\n  top: 1px;\n  left: 1px;\n}\n.dyna-button.dnbtn-style-ROUNDED.dnbtn-size-LARGE button {\n  border-radius: 32px;\n}\n.dyna-button.dnbtn-style-ROUNDED.dnbtn-size-LARGE button:active {\n  top: 1px;\n  left: 1px;\n}\n.dyna-button.dnbtn-style-ROUNDED.dnbtn-size-XLARGE button {\n  border-radius: 64px;\n  font-weight: bold;\n}\n.dyna-button.dnbtn-style-ROUNDED.dnbtn-size-XLARGE button:active {\n  top: 1px;\n  left: 1px;\n}\n.dyna-button.dnbtn-style-ROUNDED.dnbtn-size-XXLARGE button {\n  border-radius: 64px;\n  font-weight: bold;\n}\n.dyna-button.dnbtn-style-ROUNDED.dnbtn-size-XXLARGE button:active {\n  top: 2px;\n  left: 2px;\n}\n.dyna-button.dnbtn-style-FLAT {\n  font-size: 0;\n}\n.dyna-button.dnbtn-style-FLAT button {\n  outline: none;\n  border-style: solid;\n  cursor: pointer;\n  -webkit-transition: background-color 200ms ease-out;\n  transition: background-color 200ms ease-out;\n}\n.dyna-button.dnbtn-size-XSMALL button {\n  padding: 1px 8px 0 8px;\n  font-size: 8px;\n  line-height: 13px;\n  border-width: 1px;\n  font-weight: bold;\n}\n.dyna-button.dnbtn-size-SMALL button {\n  padding: 1px 8px 0 8px;\n  font-size: 10px;\n  line-height: 25px;\n  border-width: 1px;\n  font-weight: bold;\n}\n.dyna-button.dnbtn-size-MEDIUM button {\n  padding: 0 16px;\n  font-size: 12px;\n  line-height: 30px;\n  border-width: 1px;\n  font-weight: bold;\n}\n.dyna-button.dnbtn-size-LARGE button {\n  padding: 0 32px;\n  font-size: 22px;\n  line-height: 46px;\n  border-width: 1px;\n  font-weight: bold;\n}\n.dyna-button.dnbtn-size-XLARGE button {\n  padding: 0 38px;\n  font-size: 28px;\n  line-height: 52px;\n  border-width: 2px;\n  font-weight: bold;\n}\n.dyna-button.dnbtn-size-XXLARGE button {\n  padding: 0 42px;\n  font-size: 32px;\n  line-height: 60px;\n  border-width: 2px;\n  font-weight: bold;\n}\n.dyna-button.dnbtn-color-WHITE_BLACK button {\n  border-color: #222223;\n  background: #D0D3D4;\n  color: #222223;\n}\n.dyna-button.dnbtn-color-WHITE_BLACK button:hover {\n  background-color: #C1C6C8;\n}\n.dyna-button.dnbtn-color-WHITE_BLACK button:active {\n  background-color: #A2AAAD;\n}\n.dyna-button.dnbtn-color-WHITE_BLACK button:disabled {\n  border-color: rgba(34, 34, 35, 0.7);\n  color: rgba(33, 39, 33, 0.5);\n}\n.dyna-button.dnbtn-color-WHITE_RED button {\n  border-color: #C8102E;\n  background: #D0D3D4;\n  color: #C8102E;\n}\n.dyna-button.dnbtn-color-WHITE_RED button:hover {\n  background-color: #C1C6C8;\n}\n.dyna-button.dnbtn-color-WHITE_RED button:active {\n  background-color: #A2AAAD;\n}\n.dyna-button.dnbtn-color-WHITE_RED button:disabled {\n  border-color: rgba(200, 16, 46, 0.7);\n  color: rgba(200, 16, 46, 0.5);\n}\n.dyna-button.dnbtn-color-BLACK_WHITE button {\n  border-color: #222223;\n  background: #222223;\n  color: #D0D3D4;\n}\n.dyna-button.dnbtn-color-BLACK_WHITE button:hover {\n  background-color: #101820;\n}\n.dyna-button.dnbtn-color-BLACK_WHITE button:active {\n  background-color: #212721;\n}\n.dyna-button.dnbtn-color-BLACK_WHITE button:disabled {\n  border-color: rgba(34, 34, 35, 0.7);\n  color: rgba(208, 211, 212, 0.5);\n}\n.dyna-button.dnbtn-color-GREY_WHITE button {\n  border-color: #7E7F74;\n  background: #51534A;\n  color: #D0D3D4;\n}\n.dyna-button.dnbtn-color-GREY_WHITE button:hover {\n  background-color: #65665C;\n}\n.dyna-button.dnbtn-color-GREY_WHITE button:active {\n  background-color: #7E7F74;\n}\n.dyna-button.dnbtn-color-GREY_WHITE button:disabled {\n  border-color: rgba(126, 127, 116, 0.7);\n  color: rgba(208, 211, 212, 0.5);\n}\n.dyna-button.dnbtn-color-RED_WHITE button {\n  border-color: #76232F;\n  background: #C8102E;\n  color: #D0D3D4;\n}\n.dyna-button.dnbtn-color-RED_WHITE button:hover {\n  background-color: #A6192E;\n}\n.dyna-button.dnbtn-color-RED_WHITE button:active {\n  background-color: #76232F;\n}\n.dyna-button.dnbtn-color-RED_WHITE button:disabled {\n  border-color: rgba(118, 35, 47, 0.7);\n  color: rgba(208, 211, 212, 0.5);\n}\n.dyna-button.dnbtn-color-TRANSPARENT_ORANGE button {\n  border-color: #FF6900;\n  background: transparent;\n  color: #FF6900;\n}\n.dyna-button.dnbtn-color-TRANSPARENT_ORANGE button:hover {\n  color: #FF8F1C;\n}\n.dyna-button.dnbtn-color-TRANSPARENT_ORANGE button:active {\n  color: #FFAE62;\n}\n.dyna-button.dnbtn-color-TRANSPARENT_ORANGE button:disabled {\n  border-color: rgba(255, 105, 0, 0.7);\n  color: rgba(255, 105, 0, 0.5);\n}\n.dyna-button.dnbtn-color-ORANGE_WHITE button {\n  border-color: #FFAE62;\n  background: #FF6900;\n  color: #D9D9D6;\n}\n.dyna-button.dnbtn-color-ORANGE_WHITE button:hover {\n  background-color: #FF8F1C;\n}\n.dyna-button.dnbtn-color-ORANGE_WHITE button:active {\n  background-color: #FFAE62;\n}\n.dyna-button.dnbtn-color-ORANGE_WHITE button:disabled {\n  border-color: rgba(255, 174, 98, 0.7);\n  color: rgba(217, 217, 214, 0.5);\n}\n.dyna-button.dnbtn-color-WHITE_ORANGE button {\n  border-color: #FF6900;\n  background: #D9D9D6;\n  color: #FF6900;\n}\n.dyna-button.dnbtn-color-WHITE_ORANGE button:hover {\n  background-color: #D0D0CE;\n}\n.dyna-button.dnbtn-color-WHITE_ORANGE button:active {\n  background-color: #C8C9C7;\n}\n.dyna-button.dnbtn-color-WHITE_ORANGE button:disabled {\n  border-color: rgba(255, 143, 28, 0.7);\n  color: rgba(255, 105, 0, 0.5);\n}\n.dyna-button.dnbtn-color-BLACK_ORANGE button {\n  border-color: #FF6900;\n  background: #222223;\n  color: #FF6900;\n}\n.dyna-button.dnbtn-color-BLACK_ORANGE button:hover {\n  background-color: #101820;\n}\n.dyna-button.dnbtn-color-BLACK_ORANGE button:active {\n  background-color: #212721;\n  color: #FFAE62;\n}\n.dyna-button.dnbtn-color-BLACK_ORANGE button:disabled {\n  border-color: rgba(255, 105, 0, 0.7);\n  color: rgba(255, 105, 0, 0.5);\n}\n.dyna-button.dnbtn-color-TRANSPARENT_WHITE button {\n  border-color: #D0D3D4;\n  background: transparent;\n  color: #D0D3D4;\n}\n.dyna-button.dnbtn-color-TRANSPARENT_WHITE button:hover {\n  border-color: #C1C6C8;\n  color: #C1C6C8;\n}\n.dyna-button.dnbtn-color-TRANSPARENT_WHITE button:active {\n  border-color: #A2AAAD;\n  color: #A2AAAD;\n}\n.dyna-button.dnbtn-color-TRANSPARENT_WHITE button:disabled {\n  border-color: rgba(208, 211, 212, 0.7);\n  color: rgba(208, 211, 212, 0.5);\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 8 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -463,7 +306,7 @@ function toComment(sourceMap) {
 }
 
 /***/ }),
-/* 9 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -509,7 +352,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(10);
+var	fixUrls = __webpack_require__(9);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -822,7 +665,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 10 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
