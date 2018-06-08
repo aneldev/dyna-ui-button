@@ -1,4 +1,5 @@
 import * as React from "react";
+import {DynaFastClick} from "dyna-ui-fast-click";
 import {EColor} from "dyna-ui-styles";
 
 import "./dyna-button.less";
@@ -25,6 +26,7 @@ export interface IDynaButtonProps {
   style?: EStyle;
   color?: EColor;
   size?: ESize;
+  touchTimeout?: number;
   disabled?: boolean;
   href?: string
   onClick?: () => void;
@@ -42,7 +44,7 @@ export class DynaButton extends React.Component<IDynaButtonProps> {
     onClick: () => undefined,
   };
 
-  private handleClick():void{
+  private handleClick(): void {
     const {disabled, onClick} = this.props;
     if (disabled) return;
     onClick();
@@ -53,8 +55,9 @@ export class DynaButton extends React.Component<IDynaButtonProps> {
       className: cn,
       children,
       style, color, size,
+      touchTimeout,
       disabled,
-      href, onClick
+      href,
     } = this.props;
 
     const className: string = [
@@ -65,11 +68,16 @@ export class DynaButton extends React.Component<IDynaButtonProps> {
     ].join(' ').trim();
 
     return (
-      <a className={className} href={href} onClick={this.handleClick.bind(this)}>
-        <button
-          className={cn || ''}
-          disabled={disabled}
-        >{children}</button>
+      <a className={className} href={href}>
+        <DynaFastClick
+          touchTimeout={touchTimeout}
+          onClick={this.handleClick.bind(this)}
+        >
+          <button
+            className={cn || ''}
+            disabled={disabled}
+          >{children}</button>
+        </DynaFastClick>
       </a>
     );
   }

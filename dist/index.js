@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"), require("dyna-ui-styles"));
+		module.exports = factory(require("react"), require("dyna-ui-fast-click"), require("dyna-ui-styles"));
 	else if(typeof define === 'function' && define.amd)
-		define("dyna-ui-button", ["react", "dyna-ui-styles"], factory);
+		define("dyna-ui-button", ["react", "dyna-ui-fast-click", "dyna-ui-styles"], factory);
 	else if(typeof exports === 'object')
-		exports["dyna-ui-button"] = factory(require("react"), require("dyna-ui-styles"));
+		exports["dyna-ui-button"] = factory(require("react"), require("dyna-ui-fast-click"), require("dyna-ui-styles"));
 	else
-		root["dyna-ui-button"] = factory(root["react"], root["dyna-ui-styles"]);
-})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_4__) {
+		root["dyna-ui-button"] = factory(root["react"], root["dyna-ui-fast-click"], root["dyna-ui-styles"]);
+})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_4__, __WEBPACK_EXTERNAL_MODULE_5__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -112,9 +112,10 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(3);
-var dyna_ui_styles_1 = __webpack_require__(4);
+var dyna_ui_fast_click_1 = __webpack_require__(4);
+var dyna_ui_styles_1 = __webpack_require__(5);
 exports.EColor = dyna_ui_styles_1.EColor;
-__webpack_require__(5);
+__webpack_require__(6);
 var EStyle;
 (function (EStyle) {
     EStyle["ROUNDED"] = "ROUNDED";
@@ -141,15 +142,16 @@ var DynaButton = /** @class */ (function (_super) {
         onClick();
     };
     DynaButton.prototype.render = function () {
-        var _a = this.props, cn = _a.className, children = _a.children, style = _a.style, color = _a.color, size = _a.size, disabled = _a.disabled, href = _a.href, onClick = _a.onClick;
+        var _a = this.props, cn = _a.className, children = _a.children, style = _a.style, color = _a.color, size = _a.size, touchTimeout = _a.touchTimeout, disabled = _a.disabled, href = _a.href;
         var className = [
             'dyna-button',
             "dnbtn-style-" + style,
             "dnbtn-color-" + color,
             "dnbtn-size-" + size,
         ].join(' ').trim();
-        return (React.createElement("a", { className: className, href: href, onClick: this.handleClick.bind(this) },
-            React.createElement("button", { className: cn || '', disabled: disabled }, children)));
+        return (React.createElement("a", { className: className, href: href },
+            React.createElement(dyna_ui_fast_click_1.DynaFastClick, { touchTimeout: touchTimeout, onClick: this.handleClick.bind(this) },
+                React.createElement("button", { className: cn || '', disabled: disabled }, children))));
     };
     DynaButton.defaultProps = {
         className: '',
@@ -180,12 +182,18 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_4__;
 
 /***/ }),
 /* 5 */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_5__;
+
+/***/ }),
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(6);
+var content = __webpack_require__(7);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -193,7 +201,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(8)(content, options);
+var update = __webpack_require__(9)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -210,10 +218,10 @@ if(false) {
 }
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(7)(false);
+exports = module.exports = __webpack_require__(8)(false);
 // imports
 
 
@@ -224,7 +232,7 @@ exports.push([module.i, ".dyna-button {\n  outline: none;\n}\n.dyna-button butto
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -306,7 +314,7 @@ function toComment(sourceMap) {
 }
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -352,7 +360,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(9);
+var	fixUrls = __webpack_require__(10);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -665,7 +673,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
