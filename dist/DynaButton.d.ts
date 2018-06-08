@@ -3,7 +3,7 @@ import { EColor } from "dyna-ui-styles";
 import "./dyna-button.less";
 export declare enum EStyle {
     ROUNDED = "ROUNDED",
-    FLAT = "FLAT",
+    FLAT = "FLAT"
 }
 export { EColor };
 export declare enum ESize {
@@ -12,7 +12,7 @@ export declare enum ESize {
     MEDIUM = "MEDIUM",
     LARGE = "LARGE",
     XLARGE = "XLARGE",
-    XXLARGE = "XXLARGE",
+    XXLARGE = "XXLARGE"
 }
 export interface IDynaButtonProps {
     className?: string;
@@ -27,6 +27,6 @@ export interface IDynaButtonProps {
 }
 export declare class DynaButton extends React.Component<IDynaButtonProps> {
     static defaultProps: IDynaButtonProps;
-    private handleClick();
+    private handleClick;
     render(): JSX.Element;
 }
