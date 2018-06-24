@@ -26,7 +26,6 @@ export interface IDynaButtonProps {
   style?: EStyle;
   color?: EColor;
   size?: ESize;
-  touchTimeout?: number;
   disabled?: boolean;
   href?: string
   onClick?: () => void;
@@ -55,7 +54,6 @@ export class DynaButton extends React.Component<IDynaButtonProps> {
       className: cn,
       children,
       style, color, size,
-      touchTimeout,
       disabled,
       href,
     } = this.props;
@@ -70,7 +68,6 @@ export class DynaButton extends React.Component<IDynaButtonProps> {
     return (
       <a className={className} href={href}>
         <DynaFastClick
-          touchTimeout={touchTimeout}
           onClick={this.handleClick.bind(this)}
         >
           <button

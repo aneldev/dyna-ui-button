@@ -142,7 +142,7 @@ var DynaButton = /** @class */ (function (_super) {
         onClick();
     };
     DynaButton.prototype.render = function () {
-        var _a = this.props, cn = _a.className, children = _a.children, style = _a.style, color = _a.color, size = _a.size, touchTimeout = _a.touchTimeout, disabled = _a.disabled, href = _a.href;
+        var _a = this.props, cn = _a.className, children = _a.children, style = _a.style, color = _a.color, size = _a.size, disabled = _a.disabled, href = _a.href;
         var className = [
             'dyna-button',
             "dnbtn-style-" + style,
@@ -150,7 +150,7 @@ var DynaButton = /** @class */ (function (_super) {
             "dnbtn-size-" + size,
         ].join(' ').trim();
         return (React.createElement("a", { className: className, href: href },
-            React.createElement(dyna_ui_fast_click_1.DynaFastClick, { touchTimeout: touchTimeout, onClick: this.handleClick.bind(this) },
+            React.createElement(dyna_ui_fast_click_1.DynaFastClick, { onClick: this.handleClick.bind(this) },
                 React.createElement("button", { className: cn || '', disabled: disabled }, children))));
     };
     DynaButton.defaultProps = {
