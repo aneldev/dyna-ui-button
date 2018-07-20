@@ -81,6 +81,17 @@ export default {
     },
 
     {
+      slug: "link",
+      title: "with link",
+      center: true,
+      component:(
+        <DynaButton
+          href="http://www.anel.co"
+        >go to Anel</DynaButton>
+      ),
+    },
+
+    {
       slug: 'the-end',
       title: 'the end',
       description: 'Thank you',

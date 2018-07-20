@@ -22,6 +22,7 @@ export interface IDynaButtonProps {
     size?: ESize;
     disabled?: boolean;
     href?: string;
+    target?: string;
     onClick?: () => void;
 }
 export declare class DynaButton extends React.Component<IDynaButtonProps> {
