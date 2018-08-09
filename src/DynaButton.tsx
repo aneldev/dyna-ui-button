@@ -1,5 +1,6 @@
 import * as React from "react";
 import {DynaFastClick} from "dyna-ui-fast-click";
+import {DynaLoadingGhost} from "dyna-ui-loading-ghost";
 import {EColor} from "dyna-ui-styles";
 
 import "./dyna-button.less";
@@ -27,6 +28,7 @@ export interface IDynaButtonProps {
   color?: EColor;
   size?: ESize;
   disabled?: boolean;
+  ghost?: boolean;
   href?: string;
   target?: string;
   onClick?: () => void;
@@ -40,6 +42,7 @@ export class DynaButton extends React.Component<IDynaButtonProps> {
     color: EColor.WHITE_BLACK,
     size: ESize.MEDIUM,
     disabled: false,
+    ghost: false,
     href: null,
     target: "_blank",
     onClick: () => undefined,
@@ -56,7 +59,7 @@ export class DynaButton extends React.Component<IDynaButtonProps> {
       className: cn,
       children,
       style, color, size,
-      disabled,
+      disabled, ghost,
       href, target,
     } = this.props;
 
@@ -67,6 +70,11 @@ export class DynaButton extends React.Component<IDynaButtonProps> {
       `dnbtn-size-${size}`,
     ].join(' ').trim();
 
+    const ghostClassName: string = [
+      'dyna-button-ghost',
+      `dyna-button-ghost${ghost && !disabled ? "--show" : "--hide"}`,
+    ].join(' ').trim();
+
     return (
       <a className={className} href={href} target={href && target || null}>
         <DynaFastClick
@@ -75,7 +83,10 @@ export class DynaButton extends React.Component<IDynaButtonProps> {
           <button
             className={cn || ''}
             disabled={disabled}
-          >{children}</button>
+          >
+            <DynaLoadingGhost className={ghostClassName}/>
+            {children}
+          </button>
         </DynaFastClick>
       </a>
     );

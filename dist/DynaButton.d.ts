@@ -21,6 +21,7 @@ export interface IDynaButtonProps {
     color?: EColor;
     size?: ESize;
     disabled?: boolean;
+    ghost?: boolean;
     href?: string;
     target?: string;
     onClick?: () => void;

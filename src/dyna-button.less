@@ -8,334 +8,352 @@
 @import (reference) "~dyna-ui-styles/styles/BLACK_ORANGE";
 
 .dyna-button {
-	outline: none;
+  outline: none;
 
-	button {
-		user-select: none;
+  button {
+    user-select: none;
+    position: relative;
+    overflow: hidden;
 
-		&:disabled {
-			pointer-events: none;
-		}
-	}
+    &:disabled {
+      pointer-events: none;
+    }
+  }
 
-	&.dnbtn- {
+  &-ghost {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.5;
 
-		&style- {
+    &--show {
+      display: block;
+    }
+    &--hide {
+      display: none;
+    }
+  }
 
-			&ROUNDED {
-				font-size: 0;
+  &.dnbtn- {
 
-				button {
-					outline: none;
-					border-style: solid;
-					cursor: pointer;
-					transition: background-color 200ms ease-out;
-				}
-				&.dnbtn-size- {
-					&XSMALL {
-						button {
-							border-radius: 8px;
-							&:active {
-								top: 1px;
-								left: 1px;
-							}
-						}
-					}
-					&SMALL {
-						button {
-							border-radius: 14px;
-							&:active {
-								top: 1px;
-								left: 1px;
-							}
-						}
-					}
-					&MEDIUM {
-						button {
-							border-radius: 16px;
-							&:active {
-								top: 1px;
-								left: 1px;
-							}
-						}
-					}
-					&LARGE {
-						button {
-							border-radius: 32px;
-							&:active {
-								top: 1px;
-								left: 1px;
-							}
-						}
-					}
-					&XLARGE {
-						button {
-							border-radius: 64px;
-							font-weight: bold;
-							&:active {
-								top: 1px;
-								left: 1px;
-							}
-						}
-					}
-					&XXLARGE {
-						button {
-							border-radius: 64px;
-							font-weight: bold;
-							&:active {
-								top: 2px;
-								left: 2px;
-							}
-						}
-					}
-				}
-			}
+    &style- {
 
-			&FLAT {
-				font-size: 0;
+      &ROUNDED {
+        font-size: 0;
 
-				button {
-					outline: none;
-					border-style: solid;
-					cursor: pointer;
-					transition: background-color 200ms ease-out;
-				}
-			}
-		}
+        button {
+          outline: none;
+          border-style: solid;
+          cursor: pointer;
+          transition: background-color 200ms ease-out;
+        }
+        &.dnbtn-size- {
+          &XSMALL {
+            button {
+              border-radius: 8px;
+              &:active {
+                top: 1px;
+                left: 1px;
+              }
+            }
+          }
+          &SMALL {
+            button {
+              border-radius: 14px;
+              &:active {
+                top: 1px;
+                left: 1px;
+              }
+            }
+          }
+          &MEDIUM {
+            button {
+              border-radius: 16px;
+              &:active {
+                top: 1px;
+                left: 1px;
+              }
+            }
+          }
+          &LARGE {
+            button {
+              border-radius: 32px;
+              &:active {
+                top: 1px;
+                left: 1px;
+              }
+            }
+          }
+          &XLARGE {
+            button {
+              border-radius: 64px;
+              font-weight: bold;
+              &:active {
+                top: 1px;
+                left: 1px;
+              }
+            }
+          }
+          &XXLARGE {
+            button {
+              border-radius: 64px;
+              font-weight: bold;
+              &:active {
+                top: 2px;
+                left: 2px;
+              }
+            }
+          }
+        }
+      }
 
-		&size- {
-			&XSMALL {
-				button {
-					padding: 1px 8px 0 8px;
-					font-size: 8px;
-					line-height: 13px;
-					border-width: 1px;
-					font-weight: bold;
-				}
-			}
-			&SMALL {
-				button {
-					padding: 1px 8px 0 8px;
-					font-size: 10px;
-					line-height: 25px;
-					border-width: 1px;
-					font-weight: bold;
-				}
-			}
-			&MEDIUM {
-				button {
-					padding: 0 16px;
-					font-size: 12px;
-					line-height: 30px;
-					border-width: 1px;
-					font-weight: bold;
-				}
-			}
-			&LARGE {
-				button {
-					padding: 0 32px;
-					font-size: 22px;
-					line-height: 46px;
-					border-width: 1px;
-					font-weight: bold;
-				}
-			}
-			&XLARGE {
-				button {
-					padding: 0 38px;
-					font-size: 28px;
-					line-height: 52px;
-					border-width: 2px;
-					font-weight: bold;
-				}
-			}
-			&XXLARGE {
-				button {
-					padding: 0 42px;
-					font-size: 32px;
-					line-height: 60px;
-					border-width: 2px;
-					font-weight: bold;
-				}
-			}
-		}
+      &FLAT {
+        font-size: 0;
 
-		&color- {
-			&WHITE_BLACK {
-				button {
-					border-color: @color-WHITE_BLACK-foreground-1;
-					background: @color-WHITE_BLACK-background-1;
-					color: @color-WHITE_BLACK-foreground-1;
-					&:hover{
-						background-color: @color-WHITE_BLACK-background-2;
-					}
-					&:active{
-						background-color: @color-WHITE_BLACK-background-3;
-					}
-					&:disabled{
-						border-color: fade(@color-WHITE_BLACK-foreground-1, 70%);
-						color: fade(@color-WHITE_BLACK-foreground-3, 50%);
-					}
-				}
-			}
-			&WHITE_RED {
-				button {
-					border-color: @color-WHITE_RED-foreground-1;
-					background: @color-WHITE_RED-background-1;
-					color: @color-WHITE_RED-foreground-1;
-					&:hover{
-						background-color: @color-WHITE_RED-background-2;
-					}
-					&:active{
-						background-color: @color-WHITE_RED-background-3;
-					}
-					&:disabled{
-						border-color: fade(@color-WHITE_RED-foreground-1, 70%);
-						color: fade(@color-WHITE_RED-foreground-1, 50%);
-					}
-				}
-			}
-			&BLACK_WHITE {
-				button {
-					border-color: @color-BLACK_WHITE-background-1;
-					background: @color-BLACK_WHITE-background-1;
-					color: @color-BLACK_WHITE-foreground-1;
-					&:hover{
-						background-color: @color-BLACK_WHITE-background-2;
-					}
-					&:active{
-						background-color: @color-BLACK_WHITE-background-3;
-					}
-					&:disabled{
-						border-color: fade(@color-BLACK_WHITE-background-1, 70%);
-						color: fade(@color-BLACK_WHITE-foreground-1, 50%);
-					}
-				}
-			}
-			&GREY_WHITE {
-				button {
-					border-color: @color-GREY_WHITE-background-3;
-					background: @color-GREY_WHITE-background-1;
-					color: @color-GREY_WHITE-foreground-1;
-					&:hover{
-						background-color: @color-GREY_WHITE-background-2;
-					}
-					&:active{
-						background-color: @color-GREY_WHITE-background-3;
-					}
-					&:disabled{
-						border-color: fade(@color-GREY_WHITE-background-3, 70%);
-						color: fade(@color-GREY_WHITE-foreground-1, 50%);
-					}
-				}
-			}
-			&RED_WHITE {
-				button {
-					border-color: @color-RED_WHITE-background-3;
-					background: @color-RED_WHITE-background-1;
-					color: @color-RED_WHITE-foreground-1;
-					&:hover{
-						background-color: @color-RED_WHITE-background-2;
-					}
-					&:active{
-						background-color: @color-RED_WHITE-background-3;
-					}
-					&:disabled{
-						border-color: fade(@color-RED_WHITE-background-3, 70%);
-						color: fade(@color-RED_WHITE-foreground-1, 50%);
-					}
-				}
-			}
-			&TRANSPARENT_ORANGE {
-				button {
-					border-color: @color-WHITE_ORANGE-foreground-1;
-					background: transparent;
-					color: @color-WHITE_ORANGE-foreground-1;
-					&:hover{
-						color: @color-WHITE_ORANGE-foreground-2;
-					}
-					&:active{
-						color: @color-WHITE_ORANGE-foreground-3;
-					}
-					&:disabled{
-						border-color: fade(@color-WHITE_ORANGE-foreground-1, 70%);
-						color: fade(@color-WHITE_ORANGE-foreground-1, 50%);
-					}
-				}
-			}
-			&ORANGE_WHITE {
-				button {
-					border-color: @color-ORANGE_WHITE-background-3;
-					background: @color-ORANGE_WHITE-background-1;
-					color: @color-ORANGE_WHITE-foreground-1;
-					&:hover{
-						background-color: @color-ORANGE_WHITE-background-2;
-					}
-					&:active{
-						background-color: @color-ORANGE_WHITE-background-3;
-					}
-					&:disabled{
-						border-color: fade(@color-ORANGE_WHITE-background-3, 70%);
-						color: fade(@color-ORANGE_WHITE-foreground-1, 50%);
-					}
-				}
-			}
-			&WHITE_ORANGE {
-				button {
-					border-color: @color-WHITE_ORANGE-foreground-1;
-					background: @color-WHITE_ORANGE-background-1;
-					color: @color-WHITE_ORANGE-foreground-1;
-					&:hover{
-						background-color: @color-WHITE_ORANGE-background-2;
-					}
-					&:active{
-						background-color: @color-WHITE_ORANGE-background-3;
-					}
-					&:disabled{
-						border-color: fade(@color-WHITE_ORANGE-foreground-2, 70%);
-						color: fade(@color-WHITE_ORANGE-foreground-1, 50%);
-					}
-				}
-			}
-			&BLACK_ORANGE {
-				button {
-					border-color: @color-BLACK_ORANGE-foreground-1;
-					background: @color-BLACK_ORANGE-background-1;
-					color: @color-BLACK_ORANGE-foreground-1;
-					&:hover{
-						background-color: @color-BLACK_ORANGE-background-2;
-					}
-					&:active{
-						background-color: @color-BLACK_ORANGE-background-3;
-						color: @color-BLACK_ORANGE-foreground-3;
-					}
-					&:disabled{
-						border-color: fade(@color-BLACK_ORANGE-foreground-1, 70%);
-						color: fade(@color-BLACK_ORANGE-foreground-1, 50%);
-					}
-				}
-			}
-			&TRANSPARENT_WHITE {
-				button {
-					border-color: @color-BLACK_WHITE-foreground-1;
-					background: transparent;
-					color: @color-BLACK_WHITE-foreground-1;
-					&:hover{
-						border-color: @color-BLACK_WHITE-foreground-2;
-						color: @color-BLACK_WHITE-foreground-2;
-					}
-					&:active{
-						border-color: @color-BLACK_WHITE-foreground-3;
-						color: @color-BLACK_WHITE-foreground-3;
-					}
-					&:disabled{
-						border-color: fade(@color-BLACK_WHITE-foreground-1, 70%);
-						color: fade(@color-BLACK_WHITE-foreground-1, 50%);
-					}
-				}
-			}
+        button {
+          outline: none;
+          border-style: solid;
+          cursor: pointer;
+          transition: background-color 200ms ease-out;
+        }
+      }
+    }
 
-		}
+    &size- {
+      &XSMALL {
+        button {
+          padding: 1px 8px 0 8px;
+          font-size: 8px;
+          line-height: 13px;
+          border-width: 1px;
+          font-weight: bold;
+        }
+      }
+      &SMALL {
+        button {
+          padding: 1px 8px 0 8px;
+          font-size: 10px;
+          line-height: 25px;
+          border-width: 1px;
+          font-weight: bold;
+        }
+      }
+      &MEDIUM {
+        button {
+          padding: 0 16px;
+          font-size: 12px;
+          line-height: 30px;
+          border-width: 1px;
+          font-weight: bold;
+        }
+      }
+      &LARGE {
+        button {
+          padding: 0 32px;
+          font-size: 22px;
+          line-height: 46px;
+          border-width: 1px;
+          font-weight: bold;
+        }
+      }
+      &XLARGE {
+        button {
+          padding: 0 38px;
+          font-size: 28px;
+          line-height: 52px;
+          border-width: 2px;
+          font-weight: bold;
+        }
+      }
+      &XXLARGE {
+        button {
+          padding: 0 42px;
+          font-size: 32px;
+          line-height: 60px;
+          border-width: 2px;
+          font-weight: bold;
+        }
+      }
+    }
 
-	}
+    &color- {
+      &WHITE_BLACK {
+        button {
+          border-color: @color-WHITE_BLACK-foreground-1;
+          background: @color-WHITE_BLACK-background-1;
+          color: @color-WHITE_BLACK-foreground-1;
+          &:hover {
+            background-color: @color-WHITE_BLACK-background-2;
+          }
+          &:active {
+            background-color: @color-WHITE_BLACK-background-3;
+          }
+          &:disabled {
+            border-color: fade(@color-WHITE_BLACK-foreground-1, 70%);
+            color: fade(@color-WHITE_BLACK-foreground-3, 50%);
+          }
+        }
+      }
+      &WHITE_RED {
+        button {
+          border-color: @color-WHITE_RED-foreground-1;
+          background: @color-WHITE_RED-background-1;
+          color: @color-WHITE_RED-foreground-1;
+          &:hover {
+            background-color: @color-WHITE_RED-background-2;
+          }
+          &:active {
+            background-color: @color-WHITE_RED-background-3;
+          }
+          &:disabled {
+            border-color: fade(@color-WHITE_RED-foreground-1, 70%);
+            color: fade(@color-WHITE_RED-foreground-1, 50%);
+          }
+        }
+      }
+      &BLACK_WHITE {
+        button {
+          border-color: @color-BLACK_WHITE-background-1;
+          background: @color-BLACK_WHITE-background-1;
+          color: @color-BLACK_WHITE-foreground-1;
+          &:hover {
+            background-color: @color-BLACK_WHITE-background-2;
+          }
+          &:active {
+            background-color: @color-BLACK_WHITE-background-3;
+          }
+          &:disabled {
+            border-color: fade(@color-BLACK_WHITE-background-1, 70%);
+            color: fade(@color-BLACK_WHITE-foreground-1, 50%);
+          }
+        }
+      }
+      &GREY_WHITE {
+        button {
+          border-color: @color-GREY_WHITE-background-3;
+          background: @color-GREY_WHITE-background-1;
+          color: @color-GREY_WHITE-foreground-1;
+          &:hover {
+            background-color: @color-GREY_WHITE-background-2;
+          }
+          &:active {
+            background-color: @color-GREY_WHITE-background-3;
+          }
+          &:disabled {
+            border-color: fade(@color-GREY_WHITE-background-3, 70%);
+            color: fade(@color-GREY_WHITE-foreground-1, 50%);
+          }
+        }
+      }
+      &RED_WHITE {
+        button {
+          border-color: @color-RED_WHITE-background-3;
+          background: @color-RED_WHITE-background-1;
+          color: @color-RED_WHITE-foreground-1;
+          &:hover {
+            background-color: @color-RED_WHITE-background-2;
+          }
+          &:active {
+            background-color: @color-RED_WHITE-background-3;
+          }
+          &:disabled {
+            border-color: fade(@color-RED_WHITE-background-3, 70%);
+            color: fade(@color-RED_WHITE-foreground-1, 50%);
+          }
+        }
+      }
+      &TRANSPARENT_ORANGE {
+        button {
+          border-color: @color-WHITE_ORANGE-foreground-1;
+          background: transparent;
+          color: @color-WHITE_ORANGE-foreground-1;
+          &:hover {
+            color: @color-WHITE_ORANGE-foreground-2;
+          }
+          &:active {
+            color: @color-WHITE_ORANGE-foreground-3;
+          }
+          &:disabled {
+            border-color: fade(@color-WHITE_ORANGE-foreground-1, 70%);
+            color: fade(@color-WHITE_ORANGE-foreground-1, 50%);
+          }
+        }
+      }
+      &ORANGE_WHITE {
+        button {
+          border-color: @color-ORANGE_WHITE-background-3;
+          background: @color-ORANGE_WHITE-background-1;
+          color: @color-ORANGE_WHITE-foreground-1;
+          &:hover {
+            background-color: @color-ORANGE_WHITE-background-2;
+          }
+          &:active {
+            background-color: @color-ORANGE_WHITE-background-3;
+          }
+          &:disabled {
+            border-color: fade(@color-ORANGE_WHITE-background-3, 70%);
+            color: fade(@color-ORANGE_WHITE-foreground-1, 50%);
+          }
+        }
+      }
+      &WHITE_ORANGE {
+        button {
+          border-color: @color-WHITE_ORANGE-foreground-1;
+          background: @color-WHITE_ORANGE-background-1;
+          color: @color-WHITE_ORANGE-foreground-1;
+          &:hover {
+            background-color: @color-WHITE_ORANGE-background-2;
+          }
+          &:active {
+            background-color: @color-WHITE_ORANGE-background-3;
+          }
+          &:disabled {
+            border-color: fade(@color-WHITE_ORANGE-foreground-2, 70%);
+            color: fade(@color-WHITE_ORANGE-foreground-1, 50%);
+          }
+        }
+      }
+      &BLACK_ORANGE {
+        button {
+          border-color: @color-BLACK_ORANGE-foreground-1;
+          background: @color-BLACK_ORANGE-background-1;
+          color: @color-BLACK_ORANGE-foreground-1;
+          &:hover {
+            background-color: @color-BLACK_ORANGE-background-2;
+          }
+          &:active {
+            background-color: @color-BLACK_ORANGE-background-3;
+            color: @color-BLACK_ORANGE-foreground-3;
+          }
+          &:disabled {
+            border-color: fade(@color-BLACK_ORANGE-foreground-1, 70%);
+            color: fade(@color-BLACK_ORANGE-foreground-1, 50%);
+          }
+        }
+      }
+      &TRANSPARENT_WHITE {
+        button {
+          border-color: @color-BLACK_WHITE-foreground-1;
+          background: transparent;
+          color: @color-BLACK_WHITE-foreground-1;
+          &:hover {
+            border-color: @color-BLACK_WHITE-foreground-2;
+            color: @color-BLACK_WHITE-foreground-2;
+          }
+          &:active {
+            border-color: @color-BLACK_WHITE-foreground-3;
+            color: @color-BLACK_WHITE-foreground-3;
+          }
+          &:disabled {
+            border-color: fade(@color-BLACK_WHITE-foreground-1, 70%);
+            color: fade(@color-BLACK_WHITE-foreground-1, 50%);
+          }
+        }
+      }
+
+    }
+
+  }
 }

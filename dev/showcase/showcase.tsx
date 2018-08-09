@@ -8,7 +8,7 @@ import {IShowcaseViewProps} from "dyna-showcase/dist/interfaces";
 require('./showcase.less');
 
 export default {
-  logo: <Logo />,
+  logo: <Logo/>,
   views: [
     {
       slug: 'intro',
@@ -25,13 +25,13 @@ export default {
     },
 
     {
-      slug: 'rounded-sizes',
+      slug: 'all-styles-sizes',
       faIconName: 'flask',
-      title: 'rounded - white/black - sizes',
+      title: 'all styles and sizes',
       center: true,
       component: (() => {
         class MyApp extends React.Component {
-          private renderButtonEnabledDisabled(key:number, size: ESize): JSX.Element {
+          private renderButtonEnabledDisabled(key: number, size: ESize): JSX.Element {
             return (
               <div className="button-container" key={key}>
                 <DynaButton
@@ -50,7 +50,7 @@ export default {
           }
 
           public renderSizes(): JSX.Element[] {
-            return Object.keys(ESize).map((size: ESize, index:number) => {
+            return Object.keys(ESize).map((size: ESize, index: number) => {
               return this.renderButtonEnabledDisabled(index, size);
             });
           }
@@ -59,10 +59,10 @@ export default {
             return this.renderSizes();
           }
         }
-        return <MyApp />;
+
+        return <MyApp/>;
       })(),
-      wrapperStyle:{
-      },
+      wrapperStyle: {},
       props: (() => {
         const props: IShowcaseViewProps[] = [];
         Object.keys(EStyle).forEach((style: EStyle) => {
@@ -84,11 +84,43 @@ export default {
       slug: "link",
       title: "with link",
       center: true,
-      component:(
+      component: (
         <DynaButton
           href="http://www.anel.co"
         >go to Anel</DynaButton>
       ),
+    },
+
+    {
+      slug: "ghost",
+      title: "ghost button",
+      description: "Ghost button gives a glossy appearence to the button to attract the user. Ghost buttons are common in games.",
+      center: true,
+      component: (
+        <DynaButton
+          ghost
+          size={ESize.LARGE}
+          color={EColor.ORANGE_WHITE}
+        >
+          I am a ghost button, press me.
+        </DynaButton>
+      ),
+      props: [
+        {
+          slug: "enabled",
+          title: "enabled",
+          props: {
+            disabled: false,
+          } as IDynaButtonProps,
+        },
+        {
+          slug: "disabled",
+          title: "disabled",
+          props: {
+            disabled: true,
+          } as IDynaButtonProps,
+        },
+      ],
     },
 
     {
